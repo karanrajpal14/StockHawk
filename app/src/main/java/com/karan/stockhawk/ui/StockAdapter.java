@@ -1,4 +1,4 @@
-package com.udacity.stockhawk.ui;
+package com.karan.stockhawk.ui;
 
 
 import android.content.Context;
@@ -9,9 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.udacity.stockhawk.R;
-import com.udacity.stockhawk.data.Contract;
-import com.udacity.stockhawk.data.PrefUtils;
+import com.karan.stockhawk.R;
+import com.karan.stockhawk.data.Contract;
+import com.karan.stockhawk.data.PrefUtils;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -26,8 +26,8 @@ class StockAdapter extends RecyclerView.Adapter<StockAdapter.StockViewHolder> {
     private final DecimalFormat dollarFormatWithPlus;
     private final DecimalFormat dollarFormat;
     private final DecimalFormat percentageFormat;
-    private Cursor cursor;
     private final StockAdapterOnClickHandler clickHandler;
+    private Cursor cursor;
 
     StockAdapter(Context context, StockAdapterOnClickHandler clickHandler) {
         this.context = context;

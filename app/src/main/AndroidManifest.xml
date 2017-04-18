@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.udacity.stockhawk">
+    package="com.karan.stockhawk">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.Manifest.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
-        android:name=".StockHawkApp"
+        android:name="com.karan.stockhawk.StockHawkApp"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
         android:supportsRtl="true"
+        android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.MainActivity">
+        <activity android:name="com.karan.stockhawk.ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,16 +24,16 @@
         </activity>
 
         <service
-            android:name=".sync.QuoteIntentService"
+            android:name="com.karan.stockhawk.sync.QuoteIntentService"
             android:exported="false" />
 
         <provider
-            android:name=".data.StockProvider"
-            android:authorities="com.udacity.stockhawk"
+            android:name="com.karan.stockhawk.data.StockProvider"
+            android:authorities="com.karan.stockhawk"
             android:exported="false" />
 
         <service
-            android:name=".sync.QuoteJobService"
+            android:name="com.karan.stockhawk.sync.QuoteJobService"
             android:enabled="true"
             android:exported="true"
             android:permission="android.permission.BIND_JOB_SERVICE" />
