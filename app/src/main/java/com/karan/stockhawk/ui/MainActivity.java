@@ -1,6 +1,7 @@
 package com.karan.stockhawk.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         SwipeRefreshLayout.OnRefreshListener,
         StockAdapter.StockAdapterOnClickHandler {
 
+    public static final String EXTRA_STOCK_NAME_KEY = "stock_name_key";
     private static final int STOCK_LOADER = 0;
     @SuppressWarnings("WeakerAccess")
     @BindView(R.id.recycler_view)
@@ -47,6 +49,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     public void onClick(String symbol) {
         Timber.d("Symbol clicked: %s", symbol);
+        Intent detailsIntent = new Intent(this, DetailActivity.class);
+        detailsIntent.putExtra(EXTRA_STOCK_NAME_KEY, symbol);
+        startActivity(detailsIntent);
     }
 
     @Override
