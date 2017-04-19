@@ -58,6 +58,7 @@ public class DetailActivity extends AppCompatActivity {
         //Fetching stock history data
         String stockHistoryData = null;
         Cursor cursor = getContentResolver().query(Contract.Quote.makeUriForStock(symbol), null, null, null, null);
+
         if (cursor != null) {
             cursor.moveToFirst();
             stockHistoryData = cursor.getString(cursor.getColumnIndex(Contract.Quote.COLUMN_HISTORY));
