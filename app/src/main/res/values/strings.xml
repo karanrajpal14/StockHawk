@@ -34,4 +34,6 @@
 
     <string name="stock_name_content_description">Stock Name</string>
 
+    <string name="incorrect_symbol_error">%1s symbol not found! Please check the symbol and try again.</string>
+
 </resources>
