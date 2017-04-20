@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.AxisBase;
+import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
@@ -80,10 +81,19 @@ public class DetailActivity extends AppCompatActivity {
         List<Entry> entries = new ArrayList<>();
         final List<Long> xAxisValues = new ArrayList<>();
 
+        final int MATERIAL_GREEN = 0xFF00C853;
+
         for (int i = 0; i < tempList.size(); i++) {
             xAxisValues.add(Long.valueOf(tempList.get(i)[0]));
             entries.add(new Entry(i, Float.valueOf(tempList.get(i)[1])));
-            LineData lineData = new LineData(new LineDataSet(entries, symbol));
+            LineDataSet lineDataSet = new LineDataSet(entries, symbol);
+            lineDataSet.setDrawFilled(true);
+            lineDataSet.setColor(MATERIAL_GREEN);
+            lineDataSet.setFillColor(MATERIAL_GREEN);
+            lineDataSet.setDrawCircles(false);
+            lineDataSet.setValueTextColor(Color.WHITE);
+
+            LineData lineData = new LineData(lineDataSet);
 
             XAxis xAxis = stockHistoryChart.getXAxis();
             xAxis.setValueFormatter(new IAxisValueFormatter() {
@@ -94,6 +104,11 @@ public class DetailActivity extends AppCompatActivity {
                 }
             });
 
+            Legend legend = stockHistoryChart.getLegend();
+            legend.setEnabled(false);
+
+            stockHistoryChart.animateXY(1000, 1000);
+            stockHistoryChart.setKeepPositionOnRotation(true);
             stockHistoryChart.getDescription().setEnabled(false);
             stockHistoryChart.getAxisLeft().setTextColor(Color.WHITE);
             stockHistoryChart.getAxisRight().setTextColor(Color.WHITE);
