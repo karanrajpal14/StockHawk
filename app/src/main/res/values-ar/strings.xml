@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="dialog_title">إضافة سهم</string>
+    <string name="dialog_hint">الرمز (مثل غوغ)</string>
+    <string name="dialog_cancel">إلغاء</string>
+    <string name="dialog_add">إضافة</string>
+
+    <string name="error_no_network">لا اتصال الشبكة! سوف تضيف الأسهم عندما تكون الشبكة متاحة.</string>
+    <string name="error_no_stocks">لم يتم إضافة أي أسهم! اضغط على الزر في الأسفل لإضافة واحد.</string>
+
+    <string name="toast_stock_added_no_connectivity">تم إضافة الرمز s%. سيتم تحديث عندما الشبكة المتاحة.</string>
+    <string name="toast_no_connectivity">سيتم تحديث عندما شبكة متاحة.</string>
+
+    <string name="stock_name_content_description">اسم السهم</string>
+
+    <string name="incorrect_symbol_error">%1s لم يتم العثور على الأسهم! يرجى التحقق من اسم وحاول مرة أخرى.</string>
+
+</resources>
