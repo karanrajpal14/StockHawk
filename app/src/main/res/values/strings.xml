@@ -41,4 +41,9 @@
     <string name="chart_desc">Historical Price Change Chart</string>
     <string name="chart_axis_date_format">%1$d.%2$d</string>
 
+    <string name="widget_title">Stock Hawk Widget</string>
+    <string name="update_stocks_content_description">Update stocks</string>
+    <string name="widget_empty_text">Add stocks in the App!</string>
+    <string name="update">update</string>
+
 </resources>
