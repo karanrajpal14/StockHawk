@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         StockAdapter.StockAdapterOnClickHandler {
 
     public static final String EXTRA_STOCK_NAME_KEY = "stock_name_key";
+    public static final String EXTRA_STOCK_VALUE_KEY = "stock_value_key";
     private static final int STOCK_LOADER = 0;
     @SuppressWarnings("WeakerAccess")
     @BindView(R.id.recycler_view)
@@ -52,10 +53,11 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private StockAdapter adapter;
 
     @Override
-    public void onClick(String symbol) {
+    public void onClick(String symbol, String value) {
         Timber.d("Symbol clicked: %s", symbol);
         Intent detailsIntent = new Intent(this, DetailActivity.class);
         detailsIntent.putExtra(EXTRA_STOCK_NAME_KEY, symbol);
+        detailsIntent.putExtra(EXTRA_STOCK_VALUE_KEY, value);
         startActivity(detailsIntent);
     }
 
@@ -109,6 +111,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         if (!networkUp() && adapter.getItemCount() == 0) {
             swipeRefreshLayout.setRefreshing(false);
             error.setText(getString(R.string.error_no_network));
+            error.setContentDescription(getString(R.string.error_no_network));
             error.setVisibility(View.VISIBLE);
         } else if (!networkUp()) {
             swipeRefreshLayout.setRefreshing(false);
@@ -116,6 +119,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         } else if (PrefUtils.getStocks(this).size() == 0) {
             swipeRefreshLayout.setRefreshing(false);
             error.setText(getString(R.string.error_no_stocks));
+            error.setContentDescription(getString(R.string.error_no_stocks));
             error.setVisibility(View.VISIBLE);
         } else {
             error.setVisibility(View.GONE);
@@ -167,8 +171,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         if (PrefUtils.getDisplayMode(this)
                 .equals(getString(R.string.pref_display_mode_absolute_key))) {
             item.setIcon(R.drawable.ic_percentage);
+            item.setTitle(R.string.display_mode_percentage);
         } else {
             item.setIcon(R.drawable.ic_dollar);
+            item.setTitle(R.string.display_mode_absolute);
         }
     }
 

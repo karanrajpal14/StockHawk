@@ -10,26 +10,61 @@
         android:id="@+id/stock_name_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_large_margin"
+        android:layout_marginBottom="@dimen/activity_large_margin"
         android:layout_marginEnd="@dimen/activity_large_margin"
-        android:layout_marginLeft="@dimen/activity_large_margin"
-        android:layout_marginRight="@dimen/activity_large_margin"
         android:layout_marginStart="@dimen/activity_large_margin"
         android:layout_marginTop="@dimen/activity_large_margin"
         android:contentDescription="@string/stock_name_content_description"
         android:gravity="center"
-        tools:text="@string/stock_name_content_description" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_two_third_guideline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/vertical_half_guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="GOOG" />
+
+    <TextView
+        android:id="@+id/value_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_large_margin"
+        android:layout_marginRight="@dimen/activity_large_margin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBaseline_toBaselineOf="@id/stock_name_textView"
+        app:layout_constraintLeft_toLeftOf="@+id/vertical_half_guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="$100.00" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vertical_half_guideline"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="192dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal_two_third_guideline"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
 
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/stock_line_chart"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="@dimen/activity_large_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_small_margin"
+        android:layout_marginEnd="@dimen/activity_large_margin"
         android:layout_marginLeft="@dimen/activity_large_margin"
         android:layout_marginRight="@dimen/activity_large_margin"
-        android:layout_marginTop="@dimen/activity_large_margin"
+        android:layout_marginStart="@dimen/activity_large_margin"
+        android:layout_marginTop="@dimen/activity_small_margin"
+        android:minHeight="350dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/stock_name_textView" />
+        app:layout_constraintTop_toBottomOf="@id/horizontal_two_third_guideline" />
 
 </android.support.constraint.ConstraintLayout>

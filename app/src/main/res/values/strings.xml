@@ -6,6 +6,9 @@
     <string name="pref_stocks_key" translatable="false">stocks</string>
 
     <string name="pref_display_mode_key" translatable="false">displayMode</string>
+    <string name="action_change_units">Display Mode</string>
+    <string name="display_mode_percentage">Percentage</string>
+    <string name="display_mode_absolute">Absolute</string>
     <string name="pref_display_mode_default" translatable="false">@string/pref_display_mode_percentage_key</string>
 
     <string name="pref_display_mode_absolute_key" translatable="false">absolute</string>
@@ -16,7 +19,6 @@
     <string name="default_stocks_microsoft" translatable="false">MSFT</string>
     <string name="default_stocks_facebook" translatable="false">FB</string>
 
-    <string name="action_change_units" translatable="false">@string/pref_display_mode_key</string>
 
     <string name="dialog_title">Add Stock</string>
     <string name="dialog_hint">Symbol (e.g. GOOG)</string>
@@ -26,11 +28,17 @@
     <string name="error_no_network">No network connectivity! Will add the stock when the network is available.</string>
     <string name="error_no_stocks">No stocks added! Hit the button at the bottom to add one.</string>
 
-    <string name="toast_stock_added_no_connectivity">Symbol %s added. Will refresh when network available.</string>
+    <string name="toast_stock_added_no_connectivity">Symbol %1s added. Will refresh when network available.</string>
     <string name="toast_no_connectivity">Will refresh when network is available.</string>
 
     <string name="stock_name_content_description">Stock Name</string>
 
     <string name="incorrect_symbol_error">%1s stock not found! Please check the name and try again.</string>
+
+    <string name="content_desc_main_add_stock">Add a stock</string>
+
+    <string name="chart_no_data">No data available</string>
+    <string name="chart_desc">Historical Price Change Chart</string>
+    <string name="chart_axis_date_format">%1$d.%2$d</string>
 
 </resources>
