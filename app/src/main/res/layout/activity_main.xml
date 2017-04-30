@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
-        android:contentDescription="@string/content_desc_main_add_stock"
+        android:contentDescription="@string/main_add_stock_content_description"
         android:onClick="button"
         android:src="@drawable/fab_plus"
         app:backgroundTint="@color/material_blue_500"

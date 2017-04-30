@@ -58,7 +58,7 @@
                 <action android:name="com.karan.stockhawk.ACTION_DATA_UPDATED" />
             </intent-filter>
             <meta-data
-                android:name="android.appwidget.AppWidgetProvider"
+                android:name="android.appwidget.provider"
                 android:resource="@xml/widget" />
         </receiver>
 

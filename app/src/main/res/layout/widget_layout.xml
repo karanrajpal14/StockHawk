@@ -5,15 +5,11 @@
     android:layout_height="match_parent"
     android:layout_margin="@dimen/activity_medium_margin">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
         <ListView
             android:id="@+id/widget_listView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:background="#424242" />
 
         <TextView
             android:id="@+id/widget_empty_textView"
@@ -21,7 +17,5 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="@string/widget_empty_text" />
-
-    </LinearLayout>
 
 </FrameLayout>

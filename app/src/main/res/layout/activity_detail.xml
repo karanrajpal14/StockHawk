@@ -15,7 +15,7 @@
         android:layout_marginEnd="@dimen/activity_large_margin"
         android:layout_marginStart="@dimen/activity_large_margin"
         android:layout_marginTop="@dimen/activity_large_margin"
-        android:contentDescription="@string/stock_name_content_description"
+        android:contentDescription="@string/main_stock_name_content_description"
         android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toTopOf="@+id/horizontal_two_third_guideline"

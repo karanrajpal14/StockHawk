@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="action_change_units">وضع العرض</string>
-    <string name="display_mode_percentage">النسبة المئوية</string>
-    <string name="display_mode_absolute">مطلق</string>
+    <string name="pref_action_change_units">وضع العرض</string>
+    <string name="pref_display_mode_percentage">النسبة المئوية</string>
+    <string name="pref_display_mode_absolute">مطلق</string>
 
     <string name="dialog_title">إضافة سهم</string>
     <string name="dialog_hint">الرمز (مثل غوغ)</string>
@@ -16,11 +16,11 @@
     <string name="toast_stock_added_no_connectivity">تمت إضافة الرمز%s1 ثانية. سيتم تحديث عندما الشبكة المتاحة.</string>
     <string name="toast_no_connectivity">سيتم تحديث عندما شبكة متاحة.</string>
 
-    <string name="stock_name_content_description">اسم السهم</string>
+    <string name="main_stock_name_content_description">اسم السهم</string>
 
     <string name="incorrect_symbol_error">لم يتم العثور على رمز %1s! لا يمكن إضافة هذا المخزون، يرجى إعادة المحاولة.</string>
 
-    <string name="content_desc_main_add_stock">إضافة سهم</string>
+    <string name="main_add_stock_content_description">إضافة سهم</string>
 
     <string name="chart_no_data">لا تتوافر بيانات</string>
     <string name="chart_desc"></string>
