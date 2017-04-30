@@ -1,29 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    //Strings for various preferences throughout the app
     <string name="pref_action_change_units">وضع العرض</string>
     <string name="pref_display_mode_percentage">النسبة المئوية</string>
     <string name="pref_display_mode_absolute">مطلق</string>
 
+    //Strings for the Add Stock dialog box
     <string name="dialog_title">إضافة سهم</string>
     <string name="dialog_hint">الرمز (مثل غوغ)</string>
     <string name="dialog_cancel">إلغاء</string>
     <string name="dialog_add">إضافة</string>
 
+    //Toast message shown after adding a new stock
+    <string name="toast_stock_added_no_connectivity">تمت إضافة الرمز%s1 ثانية. سيتم تحديث عندما الشبكة المتاحة.</string>
+    <string name="toast_no_connectivity">سيتم تحديث عندما شبكة متاحة.</string>
+    <string name="incorrect_symbol_error">لم يتم العثور على رمز %1s! لا يمكن إضافة هذا المخزون، يرجى إعادة المحاولة.</string>
+
+    //When ListView is empty
     <string name="error_no_network">لا اتصال الشبكة! سوف تضيف الأسهم عندما تكون الشبكة متاحة.</string>
     <string name="error_no_stocks">لم يتم إضافة أي أسهم! اضغط على الزر في الأسفل لإضافة واحد.</string>
 
-    <string name="toast_stock_added_no_connectivity">تمت إضافة الرمز%s1 ثانية. سيتم تحديث عندما الشبكة المتاحة.</string>
-    <string name="toast_no_connectivity">سيتم تحديث عندما شبكة متاحة.</string>
-
+    //Content descriptions for all elements
     <string name="main_stock_name_content_description">اسم السهم</string>
-
-    <string name="incorrect_symbol_error">لم يتم العثور على رمز %1s! لا يمكن إضافة هذا المخزون، يرجى إعادة المحاولة.</string>
-
     <string name="main_add_stock_content_description">إضافة سهم</string>
+    <string name="update_stocks_content_description">تحديث الأسهم</string>
 
+    //Strings for LineChart in Details Activity
     <string name="chart_no_data">لا تتوافر بيانات</string>
-    <string name="chart_desc"></string>
-    <string name="chart_axis_date_format">%1$d.%2$d</string>
+    <string name="chart_desc">التغير التاريخي في الرسم البياني</string>
+
+    //Strings for widget
+    <string name="widget_title">ستوك هوك القطعة</string>
+    <string name="widget_empty_text">إضافة أسهم في التطبيق!</string>
 
 </resources>

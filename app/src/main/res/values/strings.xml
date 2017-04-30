@@ -39,9 +39,9 @@
     <string name="update_stocks_content_description">Update stocks</string>
 
     //Strings for LineChart in Details Activity
+    <string name="chart_axis_date_format" translatable="false">%1$d.%2$d</string>
     <string name="chart_no_data">No data available</string>
     <string name="chart_desc">Historical Price Change Chart</string>
-    <string name="chart_axis_date_format">%1$d.%2$d</string>
 
     //Strings for widget
     <string name="widget_update" translatable="false">update</string>
