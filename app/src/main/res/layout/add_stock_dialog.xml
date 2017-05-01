@@ -12,6 +12,7 @@
         android:layout_marginEnd="@dimen/activity_small_margin"
         android:layout_marginStart="@dimen/activity_small_margin"
         android:layout_marginTop="@dimen/activity_large_margin"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:hint="@string/dialog_hint"
         android:inputType="textCapCharacters" />
 
