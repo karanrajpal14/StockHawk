@@ -7,6 +7,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
@@ -19,7 +20,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.karan.stockhawk.R;
 import com.karan.stockhawk.data.Contract;
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             error.setVisibility(View.VISIBLE);
         } else if (!networkUp()) {
             swipeRefreshLayout.setRefreshing(false);
-            Toast.makeText(this, R.string.toast_no_connectivity, Toast.LENGTH_LONG).show();
+            Snackbar.make(findViewById(R.id.main_coordinator_layout), R.string.toast_no_connectivity, Snackbar.LENGTH_LONG).show();
         } else if (PrefUtils.getStocks(this).size() == 0) {
             swipeRefreshLayout.setRefreshing(false);
             error.setText(getString(R.string.error_no_stocks));
@@ -223,11 +223,14 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                     swipeRefreshLayout.setRefreshing(true);
                 } else {
                     String message = getString(R.string.toast_stock_added_no_connectivity, symbol);
-                    Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
+                    Snackbar.make(findViewById(R.id.main_coordinator_layout), message, Snackbar.LENGTH_LONG).show();
                 }
                 addCorrectStock(symbol);
             } else {
-                Toast.makeText(MainActivity.this, String.format(getResources().getString(R.string.incorrect_symbol_error), symbol), Toast.LENGTH_SHORT).show();
+                Snackbar.make(findViewById(R.id.main_coordinator_layout),
+                        String.format(getResources().getString(R.string.incorrect_symbol_error), symbol),
+                        Snackbar.LENGTH_LONG)
+                        .show();
             }
         }
     }
