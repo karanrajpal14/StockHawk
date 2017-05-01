@@ -1,6 +1,5 @@
 package com.karan.stockhawk.ui;
 
-
 import android.content.Context;
 import android.database.Cursor;
 import android.support.v7.widget.RecyclerView;
@@ -66,8 +65,13 @@ class StockAdapter extends RecyclerView.Adapter<StockAdapter.StockViewHolder> {
 
         cursor.moveToPosition(position);
 
-        holder.symbol.setText(cursor.getString(Contract.Quote.POSITION_SYMBOL));
-        holder.price.setText(dollarFormat.format(cursor.getFloat(Contract.Quote.POSITION_PRICE)));
+        String symbolStr = cursor.getString(Contract.Quote.POSITION_SYMBOL);
+        holder.symbol.setText(symbolStr);
+        holder.symbol.setContentDescription(symbolStr);
+
+        String priceStr = dollarFormat.format(cursor.getFloat(Contract.Quote.POSITION_PRICE));
+        holder.price.setText(priceStr);
+        holder.price.setContentDescription(priceStr);
 
         float rawAbsoluteChange = cursor.getFloat(Contract.Quote.POSITION_ABSOLUTE_CHANGE);
         float percentageChange = cursor.getFloat(Contract.Quote.POSITION_PERCENTAGE_CHANGE);
@@ -78,16 +82,17 @@ class StockAdapter extends RecyclerView.Adapter<StockAdapter.StockViewHolder> {
             holder.change.setBackgroundResource(R.drawable.percent_change_pill_red);
         }
 
-        String change = dollarFormatWithPlus.format(rawAbsoluteChange);
-        String percentage = percentageFormat.format(percentageChange / 100);
+        String changeStr = dollarFormatWithPlus.format(rawAbsoluteChange);
+        String percentageStr = percentageFormat.format(percentageChange / 100);
 
         if (PrefUtils.getDisplayMode(context)
                 .equals(context.getString(R.string.pref_display_mode_absolute_key))) {
-            holder.change.setText(change);
+            holder.change.setText(changeStr);
+            holder.change.setContentDescription(changeStr);
         } else {
-            holder.change.setText(percentage);
+            holder.change.setText(percentageStr);
+            holder.change.setContentDescription(percentageStr);
         }
-
 
     }
 
@@ -130,7 +135,6 @@ class StockAdapter extends RecyclerView.Adapter<StockAdapter.StockViewHolder> {
             clickHandler.onClick(cursor.getString(symbolColumn), dollarFormat.format(cursor.getFloat(Contract.Quote.POSITION_PRICE)));
 
         }
-
 
     }
 }
