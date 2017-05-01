@@ -5,8 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="?android:attr/listPreferredItemHeight"
     android:layout_marginEnd="@dimen/activity_large_margin"
-    android:layout_marginLeft="@dimen/activity_large_margin"
-    android:layout_marginRight="@dimen/activity_large_margin"
     android:layout_marginStart="@dimen/activity_large_margin"
     android:gravity="center_vertical"
     android:orientation="horizontal">
@@ -31,6 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10sp"
+            android:textDirection="ltr"
             tools:text="1000.00" />
 
         <TextView
@@ -39,8 +38,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/percent_change_pill_green"
-            android:paddingLeft="@dimen/activity_small_margin"
-            android:paddingRight="@dimen/activity_small_margin"
+            android:paddingEnd="@dimen/activity_small_margin"
+            android:paddingStart="@dimen/activity_small_margin"
+            android:textDirection="ltr"
             tools:text="100%" />
+
     </LinearLayout>
+
 </LinearLayout>

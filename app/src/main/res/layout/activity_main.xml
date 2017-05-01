@@ -18,8 +18,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingEnd="@dimen/activity_large_margin"
-            android:paddingLeft="@dimen/activity_large_margin"
-            android:paddingRight="@dimen/activity_large_margin"
             android:paddingStart="@dimen/activity_large_margin" />
 
     </android.support.v4.widget.SwipeRefreshLayout>
@@ -45,8 +43,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:paddingEnd="@dimen/activity_large_margin"
-        android:paddingLeft="@dimen/activity_large_margin"
-        android:paddingRight="@dimen/activity_large_margin"
         android:paddingStart="@dimen/activity_large_margin"
         android:textAppearance="@android:style/TextAppearance.Medium"
         android:visibility="gone"
