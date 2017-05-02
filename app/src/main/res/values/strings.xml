@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name" translatable="true">Stock Hawk</string>
+    <string name="app_name" translatable="false">Stock Hawk</string>
 
-    //Strings for various preferences throughout the app
+    <!--Strings for various preferences throughout the app-->
     <string name="pref_stocks_initialized_key" translatable="false">initialized</string>
     <string name="pref_stocks_key" translatable="false">stocks</string>
     <string name="pref_display_mode_key" translatable="false">displayMode</string>
@@ -12,38 +12,38 @@
     <string name="pref_display_mode_percentage" translatable="true">Percentage</string>
     <string name="pref_display_mode_absolute" translatable="true">Absolute</string>
 
-    //Default stocks that are added at first installation
+    <!--Default stocks that are added at first installation-->
     <string name="default_stocks_yahoo" translatable="false">YHOO</string>
     <string name="default_stocks_apple" translatable="false">AAPL</string>
     <string name="default_stocks_microsoft" translatable="false">MSFT</string>
     <string name="default_stocks_facebook" translatable="false">FB</string>
 
-    //Strings for the Add Stock dialog box
+    <!--Strings for the Add Stock dialog box-->
     <string name="dialog_title" translatable="true">Add Stock</string>
     <string name="dialog_hint" translatable="true">Symbol (e.g. GOOG)</string>
     <string name="dialog_cancel" translatable="true">Cancel</string>
     <string name="dialog_add" translatable="true">Add</string>
 
-    //Toast message shown after adding a new stock
+    <!--Toast message shown after adding a new stock-->
     <string name="toast_stock_added_no_connectivity" translatable="true">Symbol %1s added. Will refresh when network available.</string>
     <string name="toast_no_connectivity" translatable="true">Will refresh when network is available.</string>
     <string name="incorrect_symbol_error" translatable="true">%1s stock not found! Please check the name and try again.</string>
 
-    //When ListView is empty
+    <!--When ListView is empty-->
     <string name="error_no_network" translatable="true">No network connectivity! Will add the stock when the network is available.</string>
     <string name="error_no_stocks" translatable="true">No stocks added! Hit the button at the bottom to add one.</string>
 
-    //Content descriptions for all elements
+    <!--Content descriptions for all elements-->
     <string name="main_stock_name_content_description" translatable="true">Stock Name</string>
     <string name="main_add_stock_content_description" translatable="true">Add a stock</string>
     <string name="update_stocks_content_description" translatable="true">Update stocks</string>
 
-    //Strings for LineChart in Details Activity
+    <!--Strings for LineChart in Details Activity-->
     <string name="chart_axis_date_format" translatable="false">%1$d.%2$d</string>
     <string name="chart_no_data" translatable="true">No data available</string>
     <string name="chart_desc" translatable="true">Historical Price Change Chart</string>
 
-    //Strings for widget
+    <!--Strings for widget-->
     <string name="widget_update" translatable="false">update</string>
     <string name="widget_title" translatable="true">Stock Hawk Widget</string>
     <string name="widget_empty_text" translatable="true">Add stocks in the App!</string>

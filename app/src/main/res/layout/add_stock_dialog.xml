@@ -10,6 +10,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/activity_small_margin"
         android:layout_marginEnd="@dimen/activity_small_margin"
+        android:layout_marginLeft="@dimen/activity_small_margin"
+        android:layout_marginRight="@dimen/activity_small_margin"
         android:layout_marginStart="@dimen/activity_small_margin"
         android:layout_marginTop="@dimen/activity_large_margin"
         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
